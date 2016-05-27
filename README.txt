@@ -12,7 +12,7 @@ Zum Aufrufen der Bilder wird täglich die crawler.php (z.B. per Cronjob) aufgeruf
 
 + Lizenz
 
-Der Crawler wurde unter kill0rz Unilicence v1.0 veröffentlicht. Diese liegt den Archiv bei.
+Der Crawler wurde unter kill0rz Unilicence v1.0 veröffentlicht. Diese liegt dem Archiv bei.
 
 + Changelog
 
@@ -24,5 +24,5 @@ Grundscript
 v1.1
 ----
 
-Fixes, Optimirierungen
-Update: Alle .php-Dateien ersetzen
+Fixes, Optimierungen
+Update: Alle *.php-Dateien ersetzen
