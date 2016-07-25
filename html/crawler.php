@@ -1,4 +1,3 @@
-
 <?php
 
 date_default_timezone_set('Europe/Berlin');
@@ -102,12 +101,12 @@ $url = "http://www.bing.com" . $filename_withpath;
 $dot = strrpos($filename, ".");
 $endung = substr($filename, $dot);
 
-if (!file_exists("./pics/" . date("Y_m_d_") . $filename) and !file_exists("./pics/" . date('Y_m_d_', time() - 86400) . $filename)) {
-	if (!copy($url, "./pics/" . date("Y_m_d_") . $filename)) {
-		echo "Error while copiing {$url} to ./pics/" . date("Y_m_d_") . $filename . "!\n";
-	} else {
-		if (!resizeImage("./pics/" . date("Y_m_d_") . $filename, "./prevs/" . date("Y_m_d_") . preg_replace("/\.[a-z]{3}/", "", $filename) . "_preview" . $endung, 150)) {
-			echo "Fehler 2!\n";
-		}
+if (!file_exists("./pics/" . date("Y_m_d_") . $filename) && !file_exists("./pics/" . date('Y_m_d_', time() - 86400) . $filename)) {
+	if (trim($filename) == "") {
+		echo "Error: Empty filename!\n";
+	} elseif (!copy($url, "./pics/" . date("Y_m_d_") . $filename)) {
+		echo "Error while copying {$url} to ./pics/" . date("Y_m_d_") . $filename . "!\n";
+	} elseif (!resizeImage("./pics/" . date("Y_m_d_") . $filename, "./prevs/" . date("Y_m_d_") . preg_replace("/\.[a-z]{3}/", "", $filename) . "_preview" . $endung, 150)) {
+		echo "Fehler 2!\n";
 	}
 }
