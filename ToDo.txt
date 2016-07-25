@@ -1,0 +1,4 @@
++ vernünftiges HTML5-Layout nutzen
+	+ Überhaupt erstmal HTML5
++ Fehlgeschlagene Downloads auf den Server prüfen und ggf. zweiter Versuch
+	+ zu debugging-Zwecken hier bei Fehlschlag ne Mail schicken lassen
