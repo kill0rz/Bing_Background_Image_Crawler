@@ -1,7 +1,6 @@
 <?php
 
 if ($handle = opendir('prevs')) {
-
 	$datestring = '';
 
 	while (false !== ($file = readdir($handle))) {
@@ -19,7 +18,6 @@ if ($handle = opendir('prevs')) {
 				if ($i < 2) {
 					$datestring .= ".";
 				}
-
 			}
 			echo "<div style='float:left'><a href='download.php?pic=" . str_replace("_preview", "", $file) . "' target='_blank'><img src='./prevs/" . $file . "' height='100px'alt='{$file}'/></a><br /><small>{$datestring}</small></div>\n";
 		}
