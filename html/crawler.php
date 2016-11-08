@@ -96,6 +96,7 @@ $s = str_replace("\/", "/", $s);
 preg_match_all("/g_img=\{url: \"\/az\/hprichbg\/rb\/[a-zA-Z0-9_-]*\.jpg/", $s, $matches, PREG_OFFSET_CAPTURE);
 $filename_withpath = str_replace("g_img={url: \"", "", $matches[0][0][0]);
 $filename = preg_replace("/\/[a-zA-Z]*\/[a-zA-Z]*\/[a-zA-Z]*\//", "", $filename_withpath);
+$filename = str_replace("g_img={url: \"", "", $filename);
 $url = "http://www.bing.com" . $filename_withpath;
 
 $dot = strrpos($filename, ".");
